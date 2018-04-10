@@ -39,10 +39,12 @@ end
 
 def count_elements(array)
   
+
   count_array = array.group_by(&:itself)
-  #binding.pry
+  
   count_array.map do |key, value|
     key.merge(count: value.length)
+    binding.pry
   end
 end
 
@@ -134,13 +136,25 @@ cool =[
 
 
 def merge_data1(keys, data)
+=======
+end
+
+def merge_data(keys, data)
+>>>>>>> 8e8473a5a3a34868608bb5cde71a3ad4c14f986f
   new_array = []
   var = "blake"
   
   keys.each do |key|
     new_array.push(key)
   end
+<<<<<<< HEAD
   new_array[0] 
+=======
+  #data.ech do |info|
+    
+  #end
+  new_array[0].merge(data[0][var])
+>>>>>>> 8e8473a5a3a34868608bb5cde71a3ad4c14f986f
   binding.pry
   new_array.push(data)
   new_array.flatten
